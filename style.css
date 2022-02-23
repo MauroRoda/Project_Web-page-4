@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0;
+    color: white;
+}
+*{
+    margin: 0;
+    border: 0;
+}
+
+
+
+.tela-de-fundo{
+    background-image: url(./img/fundo2.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-principal{
+    background-color: crimson;
+    width: 90vw;
+    height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-secundario{
+    background-color: blue;
+    width: 80vw;
+    height: 80vh;
+}
+
+/* Inicio do Cabeçalho */
+.cabecalho{
+    background-color: aqua;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .logo{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .logo img{
+    height: 50px;
+}
+
+.cabecalho .menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu ul li{
+    padding: 1rem; 
+}
+
+.cabecalho .menu ul li a img{
+    /* text-decoration: none; */
+}
+/* Fim do Cabeçalho */
