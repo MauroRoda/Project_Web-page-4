@@ -1,3 +1,4 @@
+
 *{
     margin: 0px;
     padding: 0;
@@ -24,11 +25,9 @@
 .container-principal{
     background-image: url(./img/fundo2.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    border: 2px solid red;
-    
-    width: 90vw;
-    height: 90vh;
+    background-size: cover;    
+    width: 1000px;
+    height: 600px;
     
     display: flex;
     justify-content: center;
@@ -36,9 +35,8 @@
 }
 /* Bloco de Conteudo Central  */
 .container-secundario{
-    border: 2px solid rgb(252, 4, 4);
-    width: 80vw;
-    height: 80vh;
+    width: 850px;
+    height:500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,7 +44,6 @@
 /* FIM do Bloco de Conteudo Central  */
 /* Inicio do Cabeçalho */
 .cabecalho{
-    border: 2px solid rgb(200, 255, 0);
     width: 100%;
     height: 50px;
 
@@ -57,7 +54,6 @@
 }
 
 .cabecalho .logo{
-    border: 2px solid rgb(47, 0, 255);
     display: flex;
     align-items: center;
 }
@@ -67,8 +63,8 @@
 }
 
 .cabecalho .menu{
-    border: 2px solid rgb(47, 0, 255);
-    width: 43%;
+    display: flex;
+    justify-content:space-between;
 }
 .cabecalho .menu ul{
     display: flex;
@@ -77,17 +73,14 @@
 
 .cabecalho .menu ul li{
     
-    padding: 12px 40px 12px 0px;
+    margin: 0px 15px 0px 0px;
+    padding: 10px;
 }
 
 .cabecalho .menu ul li:nth-child(5){
-    padding: 0;
-    
+    margin-right: 0;
 }
 
-.cabecalho .menu ul li a img{
-    height: 40px;
-}
 /* Fim do Cabeçalho */
 
 /* INICIO conteudo Central */
@@ -99,34 +92,51 @@
 }
 /* ---------------------------------------- */
 .conteudo-central .menu-esquerda{
-    width: 3%;
+    width: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     transform: rotate(270deg);  
 }
-.conteudo-central .menu-esquerda .midias{
-    padding: 10px;
+
+.conteudo-central .menu-esquerda .midias::after{
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: beige;
+    display: block;
+    
 }
-.conteudo-central .menu-esquerda .midias:nth-child(2){
-    text-decoration: underline;
+.conteudo-central .menu-esquerda .midias {
+   margin-left: 20px;
 }
+
 /* ----------------------imagem do astronauta------------------ */
 .conteudo-central .menu-centro-esquerda{
-    border: 2px solid rgb(202, 5, 31);
-    width: 54%;  
+    width: 600px;  
+    z-index: 1;
+}
+.conteudo-central .menu-centro-esquerda::after{
+    content: '';
+    position: absolute;
+    width: 105px;
+    height: 350px;
+    border: 6px solid rgb(66, 98, 241);
+    margin-top: 10px;
+    margin-left: -120px;    
+    z-index: -1;
 }
 .conteudo-central .menu-centro-esquerda img{
-    width: 60%;
+    width: 350px;
+    height: 400px;
     transform: rotate(15deg); 
     margin-left: 10%; 
 }
 
-/* ---------------------------------------- */
+/* --------------------TEXTO -------------------- */
 .conteudo-central .menu-centro-direita{
-    border: 2px solid rgb(202, 166, 5);
-    width: 40%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,16 +146,21 @@
 .conteudo-central .menu-centro-direita p{
     margin-top: 50px;
 }
+.under{
+    text-decoration: underline;
+}
+.conteudo-central .menu-centro-direita h2{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+}
 
 /* ---------------------------------------- */
 .conteudo-central .menu-direita{
-    border: 2px solid rgb(202, 5, 81);
-    width: 3%;
+    width: 30px;
     display: flex;
     flex-direction: row;
     justify-content:center;
     align-items: center;
-
 }
 .conteudo-central .menu-direita .sub-menu{
     transform: rotate(90deg);
@@ -155,4 +170,42 @@
    width: 100px;
 }    
 /* ---------------------------------------- */
+
+/*  ---------- Roda pé ------- */
+.roda-pe{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.roda-pe .navegacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    letter-spacing: .05rem;
+}
+.roda-pe .navegacao h4{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+.roda-pe .navegacao p{
+    font-size: 0.8rem;   
+}
+.roda-pe .loading-icon img{
+    width: 40px;
+} 
+
+.roda-pe .navegacao .menu-passa-pagina{
+    display: flex;
+    flex-direction: row;
+    margin-top: -25px;
+}
+
+.roda-pe .navegacao .menu-passa-pagina a {
+    font-size: 40px;
+    padding: 10px;
+}
+
 /* FIM conteudo Central */
